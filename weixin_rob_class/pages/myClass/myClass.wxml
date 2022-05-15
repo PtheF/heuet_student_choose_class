@@ -1,0 +1,29 @@
+
+
+<view class="select-app">
+
+<view class="select-title">
+    <view style="width: 100px;">我的选课</view>
+    <button class="my" bindtap="back">返回</button>
+</view>
+
+<view class="select-body">
+    <view class="h2">我的课程</view>
+
+    <view class="cls-list" wx:for="{{myClass}}">
+    
+        <view class="cls">
+            <view class="cls-name">{{item.name}}</view>
+        
+            <view class="info-row">
+                <view class="info">教师：{{item.teacher}}</view>
+                <view class="info">时间：<text style="color: #4588f8;">{{item.time}}</text></view>
+            </view>
+        </view>
+    </view>
+    
+    <view style="height: 40px;"></view>
+
+</view>
+
+</view>

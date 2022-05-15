@@ -1,0 +1,3 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+RobClassRequest,41000,562,4,1754,188.90,0.000%,1663.48846,383.01,657.23,235.8
+TOTAL,41000,562,4,1754,188.90,0.000%,1663.48846,383.01,657.23,235.8

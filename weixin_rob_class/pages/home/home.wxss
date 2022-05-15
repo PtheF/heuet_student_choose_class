@@ -1,0 +1,57 @@
+/* pages/home/home.wxss */
+
+view.home-app{
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url("http://49.232.218.190/bg2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+}
+
+view.user-info{
+    margin: 20px auto 10px;
+    background: rgba(255, 255, 255, 0.7);
+    width: 95%;
+    flex-grow: 1;
+    border-radius: 20px;
+    border: 1px solid grey;
+}
+
+view.avatar{
+    background-image: url("https://eportal.heuet.edu.cn/img/upload/image/default.png");
+    width: 70px;
+    height: 70px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0 auto 0;
+    transform: translateY(-30px);
+    border: 1px solid grey;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px grey;
+}
+
+view.info-list{
+    margin: 0 auto 0;
+    width: 90%;
+}
+view.h2{
+    font-size: 24px;
+    color: rgb(102, 173, 255);
+    font-weight: 700;
+    text-align: center;
+}
+
+view.info{
+    margin: 10px auto 0;
+    padding-left: 30px;
+}
+
+button.back{
+    margin-top: 20px;
+    background-color: #4588f8;
+    color: white;
+}

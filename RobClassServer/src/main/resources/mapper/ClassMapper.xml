@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace：命名空间，用于隔离sql-->
+<mapper namespace="cn.chl.robClass.mapper.IClassMapper">
+
+    <select id="getClassStock" resultType="ClassStockPO">
+        select id, stock, remain, selected from class_stock;
+    </select>
+
+    <select id="getClassDes" parameterType="String" resultType="ClassPO">
+        select id, name, teacher, cls_no, c_time, typ from class_des where cls_no = #{clsNo};
+    </select>
+
+    <insert id="insertClass" parameterType="ClassPO">
+        insert into class_des
+        values(#{id}, #{name}, #{teacher}, #{clsNo}, #{cTime}, #{typ});
+    </insert>
+
+    <insert id="insertClassStock" parameterType="ClassStockPO">
+        insert into class_stock
+        values(#{id}, #{stock}, #{remain}, #{selected});
+    </insert>
+
+</mapper>

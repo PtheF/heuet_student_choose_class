@@ -1,0 +1,54 @@
+
+<view class="select-app">
+
+<view class="select-title">
+    <view style="width: 100px;">学生选课</view>
+    <button class="my" bindtap="myClass">我选的课</button>
+</view>
+
+<view class="select-body">
+    <view class="h2">选任选课</view>
+
+    <view class="cls-list">
+    
+        <view class="cls" wx:for="{{elc}}" bindtap="robClass" data-id="{{item.id}}" data-typ="1">
+            <view class="cls-name">{{item.name}}</view>
+        
+            <view class="info-row">
+                <view class="info">教师：{{item.teacher}}</view>
+                <view class="info">时间：{{item.time}}</view>
+            </view>
+        
+            <view class="info-row">
+                <view class="info">已选: <text style="color: #ff7c25;">{{item.selected}}</text></view>
+                <view class="info">容量：<text style="color: #4588f8;">{{item.capacity}}</text></view>
+            </view>
+        </view>
+    </view>
+
+    <view class="h2">选体育课</view>
+
+    <view class="cls-list">
+    
+        <view class="cls" wx:for="{{pes}}" bindtap="robClass" data-id="{{item.id}}" data-typ="2">
+            <view class="cls-name">{{item.name}}</view>
+        
+            <view class="info-row">
+                <view class="info">教师：{{item.teacher}}</view>
+                <view class="info">时间：{{item.time}}</view>
+            </view>
+        
+            <view class="info-row">
+                <view class="info">余量: <text style="color: #ff7c25;">{{item.remain}}</text></view>
+                <view class="info">容量：<text style="color: #4588f8;">{{item.capacity}}</text></view>
+            </view>
+
+        </view>
+
+    </view>
+
+    <view style="height: 40px;"></view>
+
+</view>
+
+</view>

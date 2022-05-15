@@ -1,0 +1,20 @@
+<view class="about-app">
+    <view class="about-title">关于</view>
+
+    <view class="about-content">
+        <view class="h2">关于作者</view>
+        <text class="content">陈HL，19级大数据一班普通的一位同学.</text>
+        <text class="content">自大一下学期开始自学Java，大二上半学期学完Spring+SpringMVC+JSP，用三个技术开发了第一个项目：线上考试系统V1.0。大二下学习学习了SpringBoot，SpringCloud，RabbitMQ，ElasticSearch，Vue，Node.js，使用这些技术做了第二个项目：线上考试系统V2.0。</text>
+        <text class="content">大三上学期机缘巧合下参与（其实是单刷）复现“喔牛车服”项目，学习企业级开发技术，了解了企业级开发理念与思想，对微服务的服务划分有了更深的认识，同时为老师搭建了一套Java项目底层架构，写了一个基于Shiro+JWT+Redis的鉴权框架。因为接手复现企业项目，阅读项目源码发现自己基础薄弱，于是在大三上学期同时学习了JVM和Java并发，对Java底层有了更深的了解。目前学习了Redis企业实战，对秒杀场景，分布式锁，分布式缓存与多级缓存有了初步认识。</text>
+    </view>
+
+    <view class="about-content">
+        <view class="h2">关于功能</view>
+        <text class="content">该选课系统不同于其他平平无奇的选课系统，该选课系统最大的亮点就是：可以承受高并发选课.</text>
+        <text class="content">其他大部分的课设级教务系统，甚至毕设级的那种系统，都没有考虑这个问题，那就是并发场景，如何在一秒钟数千甚至上万条请求接入时系统仍旧可以保持较低的响应速度，大部分人写出来的选课系统，直接操作数据库，那么在选课这种“秒杀”场景下，大量请求涌入数据库，数据库很有可能承受不住压力，导致整个数据库发生宕机.</text>
+        <text class="content">所以其实大部分人写的同类型课设，甚至是毕设，都忽略了这个至关重要的问题，导致在生产环境中，他们的系统压根无法正常工作，所以这不是技术选择合适与否的问题，而是系统可用性问题，普通的选课系统，根本不可用。</text>
+        <text class="content">而我的系统，可以承受高并发场景，我将使用Redis，将大部分数据进行缓存来减少数据库压力，将部分业务放到Redis中不直接对数据库进行读写操作，使用消息订阅与发布技术异步的处理选课业务，从而保证数据库压力不会过大，同时为了防止选课一开始缓存为空，大量请求进入数据库，我会在选课开始前进行缓存预热，将热点数据提前存入缓存，避免数据库高压</text>
+        <text class="content">如果场景再复杂，比如学校人数太多，课程太多，或者我单纯想要更进一步提升响应速度，那么可以把整个系统部署成集群，使用Nginx进行反向代理，负载均衡，同时可以使用Openresty配合Lua脚本搭建业务Nginx集群实现本地缓存，Redis可以搭建成Redis集群来应对更高的并发量 等等等等。</text>
+        <text class="content">总结起来就是一句话：<text style="color: red">优化永无止境</text></text>
+    </view>
+</view>

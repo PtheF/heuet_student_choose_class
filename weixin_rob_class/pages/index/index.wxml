@@ -1,0 +1,28 @@
+<view class="bg">
+
+<image src="https://cas.heuet.edu.cn/cas/assets/images/cas_logo.png" style="margin-top: 20px; margin-left: 20px; width: 280px; height: 50px;"></image>
+
+<view class="login-body">
+    <view class="login-title">账号登陆</view>
+
+    <view class="input-view">
+        <image src="https://cas.heuet.edu.cn/cas/assets/images/user.png" style="width: 30px; height: 30px;"/>
+        <input type="text" placeholder="学号" class="input-item" bindinput="changeId"/>
+    </view>        
+
+    <view class="input-view">
+        <image src="https://cas.heuet.edu.cn/cas/assets/images/lock.png" style="width: 30px; height: 30px;"/>
+        <input type="password" placeholder="密码" class="input-item" bindinput="changePw"/>
+    </view>
+
+    <view class="login-view">
+        <button class="login-button" bindtap="login">登录</button>
+    </view>
+
+    <view class="notice-view">
+        <text style="color: red;">温馨提示</text>
+        <text style="color: white;">: 本小程序非官方，谨防电信诈骗，套取个人信息，请下载国家反诈APP</text>
+    </view>
+</view>
+
+</view>

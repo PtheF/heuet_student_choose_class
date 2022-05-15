@@ -1,0 +1,27 @@
+/* pages/about/about.wxss */
+
+view.about-app{
+
+}
+
+view.about-title{
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(79, 79, 255);
+    text-align: center;
+}
+
+view.h2{
+    font-size: 21px;
+}
+
+view.about-content{
+    margin: 20px 10px 0 10px;
+}
+
+text.content{
+    margin: 10px auto 20px;
+    color: rgb(99, 99, 99);
+    font-size: 13px;
+    display: block;
+}

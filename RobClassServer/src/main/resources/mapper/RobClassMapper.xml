@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace：命名空间，用于隔离sql-->
+<mapper namespace="cn.chl.robClass.mapper.IRobClassMapper">
+
+    <insert id="saveRobRecord" parameterType="RobClassMessage">
+        insert into rob_record values (#{rid}, #{uid}, #{cid});
+    </insert>
+
+    <update id="increMember" parameterType="int">
+        update class_stock set selected = selected + 1, remain = remain - 1 where id = #{cid};
+    </update>
+
+</mapper>

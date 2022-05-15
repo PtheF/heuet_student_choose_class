@@ -1,0 +1,66 @@
+/* pages/login/login.wxss */
+
+input{
+  outline: none;
+  border: none;
+  list-style: none;
+}
+
+view.bg{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url("http://49.232.218.190/bg.png");
+
+  background-repeat: no-repeat;
+  background-size: 105%;
+  background-color: rgb(52, 52, 83);
+}
+
+view.login-body{
+  margin: 30px auto 0;
+  width: 270px; 
+  height: 300px;
+  border: 1px solid grey;
+  background-color: rgba(43, 43, 43, 0.6);
+  border-radius: 20px;
+}
+
+view.login-title{
+  margin: 20px auto 0;
+  font-weight: 900px;
+  font-size: 23px;
+  text-align: center;
+  color: white;
+}
+
+view.input-view{
+  padding: 10px 5px 0 10px;
+  display: flex;
+}
+
+input.input-item{
+  color: white;
+  display: inline-block;
+  width: 200px;
+  appearance: none;
+  border-bottom: 1px solid white;
+  font-size: 16px;
+}
+
+view.login-view{
+  margin: 30px auto 0;
+}
+
+button.login-button{
+  color: white;
+  font-weight: 300;
+  font-size: 15px;
+  background-color: #4588f8;
+}
+
+view.notice-view{
+  padding: 20px 10px 0 10px;  
+  font-size: 12px;
+  font-weight: 100;
+}

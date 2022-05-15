@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace：命名空间，用于隔离sql-->
+<mapper namespace="cn.chl.robClass.mapper.InitialMapper">
+
+    <update id="initStock">
+        update class_stock set remain = stock, selected = 0 where id = '100' or 1 = 1;
+    </update>
+
+    <delete id="clearRecord">
+        delete from rob_record where rid = '100' or 1 = 1;
+    </delete>
+
+</mapper>

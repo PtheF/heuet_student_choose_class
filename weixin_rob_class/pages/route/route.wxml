@@ -1,0 +1,45 @@
+<view class="route-app">
+
+    <swiper class="swp" indicator-dots autoplay>
+    
+        <swiper-item class="swp-item">
+            <image src="./assets/s1.png" class="swiper-img"/>
+            <text>开大会</text>
+        </swiper-item>
+    
+        <swiper-item class="swp-item">
+            <image src="./assets/s2.png" class="swiper-img"></image>
+            <text>学党史</text>
+        </swiper-item>
+
+        <swiper-item class="swp-item">
+            <image src="./assets/s3.png" class="swiper-img"></image>
+            <text>新媒体</text>
+        </swiper-item>
+
+    </swiper>
+
+    <view class="func">
+
+        <view class="route-title">个人门户</view>
+        <view class="route-wel">欢迎：{{name}}</view>
+    
+        <view class="button-view">
+            <button class="route-button" bindtap="home">个人信息</button>
+        </view>
+
+        <view class="button-view">
+            <button class="route-button" bindtap="selectClass">选课</button>
+        </view>
+
+        <view class="button-view">
+            <button class="route-button" bindtap="myClass">我的课程</button>
+        </view>
+
+        <view class="button-view">
+            <button class="route-button" bindtap="about">关于</button>
+        </view>
+
+    </view>
+
+</view>

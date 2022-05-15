@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 修改这里的jdbc配置
+    url: jdbc:mysql://192.168.73.100:3306/rob_class?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+    username: chl
+    password: 123456
+
+  # 集群模式下使用这套配置，把这里的集群信息修改成你的集群信息
+  # 我这里没有密码，如果你的有，记得加上密码配置
+  redis:
+    cluster:
+      nodes:
+        - 192.168.73.11:6379
+        - 192.168.73.11:6380
+        - 192.168.73.12:6379
+        - 192.168.73.12:6380
+        - 192.168.73.13:6379
+        - 192.168.73.13:6380
+
+   # 单Redis配置，同理改成你的配置信息
+#  redis:
+#    host: 192.168.73.11
+#    database: 0
+#    port: 6379
+#    password: xxxxxx
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: cn.chl.robClass.entity
+  mapper-locations: classpath:mapper/*.xml
